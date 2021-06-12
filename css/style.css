@@ -1,0 +1,98 @@
+body{
+  color: #fff ;
+  font-family: 'Roboto', sans-serif; 
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.header{
+  display: flex;
+  align-items: center; 
+  /*padding-top: 40px;*/
+  margin-bottom: 80px;
+}
+.logo-link{
+  display: inline-block;
+  margin-right: 52px;
+}
+.nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Убераем точки у меню */
+}
+.nav-menu-item{
+   margin-right: 30px;
+}
+.nav-menu-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*.text-venom {
+  font-family: VENOM; /* Имя шрифта *
+  src: url(fonts/VENOM.ttf); /* Путь к файлу со шрифтом*/
+
+/*end header*/
+
+.film-logo{
+  width: 70%;
+  
+}
+.film-date {
+  display: block; 
+  font-size: 24px;  
+  line-height: 28px; /*Размер высоты блока где расположена надпись*/
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 38px;
+}
+.film-description {
+  max-width: 423px;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 42px;
+}
+/*end film*/
+
+.button-group{
+ margin-top: 70px; 
+}
+.button{
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-icon, .button-text{
+  display: inline-block; 
+  vertical-align: middle; /*Выравнивание текста относительно иконки*/
+}
+.button-text{
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 10px;
+}
+.button-primier{
+  color: #8D0019;
+  background-color: rgb(46, 41, 41);
+  margin-right: 36px;
+}
+.button-link{
+  color:#fff;
+  text-decoration: none;
+}
+/*end button*/
+
+.venom{
+  position: absolute; /*Данное изображение не будет наезжать на другие элементы*/
+  top: 0;
+  right: 0;
+}
+.blood{
+  background: url(../img/blood.png) no-repeat top, #14131A url('../img/background.jpg') no-repeat center center /100%;
+  
+}
+/*end img*/
+ 
