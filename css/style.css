@@ -1,4 +1,5 @@
 body{
+  background-color: #14131A;
   color: #fff ;
   font-family: 'Roboto', sans-serif; 
 }
@@ -6,11 +7,12 @@ body{
   max-width: 1140px;
   margin: auto;
 }
+/*_____________________-*/
 .header{
   display: flex;
   align-items: center; 
   /*padding-top: 40px;*/
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .logo-link{
   display: inline-block;
@@ -37,7 +39,6 @@ body{
 
 .film-logo{
   width: 70%;
-  
 }
 .film-date {
   display: block; 
@@ -91,8 +92,96 @@ body{
   right: 0;
 }
 .blood{
-  background: url(../img/blood.png) no-repeat top, #14131A url('../img/background.jpg') no-repeat center center /100%;
-  
+  background: url(../img/blood.png) no-repeat top, url('../img/background.jpg') no-repeat center center /100%;
 }
 /*end img*/
- 
+
+/*about.html*/
+.content {
+  display: flex;
+}
+.col-right, .col-left{
+  flex-basis: 50%; /*Задаёт базовый размер флекс элемента по основной оси. Каждая кононка на странице будет занимать не более 50% страницы*/
+}
+.content-title{
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.content-subtitle{
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+} 
+.content-text{
+  margin-bottom: 30px;
+  max-width: 453px;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8)
+}
+.content .list{
+  list-style-type: none; /*Свойство позволяет определить внешний вид маркера элемента списка (кружка, символа, определенного счетчика и т. Д.). none - Маркер не отображается.*/
+  padding: 0; 
+}
+.list-item{
+  line-height: 1.5; /* Расстояние между словами */
+}
+.coloum { /*Разделяем список на 2 кононки + правила для браузеров, чтоб в разных браузерах отображалось одинаково*/
+  max-width: 390px;
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  -moz-column-count: 2; /* Для Firefox */
+  column-count: 2; /*Разделяет элементы на колличество столбцов*/
+  -webkit-column-gap: 20px; /* Расстояние между столбцами. Для Safari и Chrome */
+  -moz-column-gap: 20px; /* Расстояние между столбцами. Для Firefox */
+  column-gap: 20px; /* Расстояние между столбцами */
+}
+/*Трейлер*/
+.content .trailer{
+  background: url('../img/trailer.jpg') no-repeat center /100%;
+  border-radius: 5px;
+  width: 350px;
+  height: 200px;
+  display: flex; /*Данное правило нужно, для того чтоб наша кнопк встала по середине*/
+  align-items: center; /*Данное правило нужно, для того чтоб наша кнопк встала по середине*/
+  justify-content: center; /*Данное правило нужно, для того чтоб наша кнопк встала по середине*/
+  margin-top: 33px;
+}
+.trailer .play {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+}
+.trailer .play-icon{
+  transform: translate(1px, 2px); /*Свойство чтоб двигать иконку плэй */
+  cursor: pointer;
+}
+/*end col-right*/
+
+.poster-wrepper{
+  display: flex;
+  align-items: start;
+}
+.poster{
+  width: 360px;
+  border-radius: 5px;
+  margin-right : 30px;
+}
+.poster-wrepper .content-subtitle{
+  margin-bottom: 5px;  
+}
+.poster-wrepper .list{
+   margin: 0; 
+   margin-bottom: 20px; 
+}
+.no-blood{
+  background:  url('../img/background.jpg') no-repeat center center /100%;
+}
+
