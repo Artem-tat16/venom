@@ -3,8 +3,12 @@ body{
   color: #fff ;
   font-family: 'Roboto', sans-serif; 
 }
+.img{
+  min-width: 100%;
+}
 .container {
-  max-width: 1140px;
+  /*max-width: 1140px;*/
+  width: 90%;
   margin: auto;
 }
 /*_____________________-*/
@@ -37,27 +41,28 @@ body{
 
 /*end header*/
 
-.film-logo{
-  width: 70%;
+.film-logo{ 
+  width: 80%;
 }
 .film-date {
   display: block; 
   font-size: 24px;  
   line-height: 28px; /*Размер высоты блока где расположена надпись*/
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 38px;
+  margin-bottom: 2%;
 }
 .film-description {
   max-width: 423px;
   font-size: 16px;
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
-  margin-top: 42px;
+  margin-top: 3%;
 }
 /*end film*/
 
 .button-group{
- margin-top: 70px; 
+ margin-top: 5%; 
+ margin-bottom: 5%;
 }
 .button{
   padding: 15px 30px;
@@ -90,9 +95,11 @@ body{
   position: absolute; /*Данное изображение не будет наезжать на другие элементы*/
   top: 0;
   right: 0;
+  max-width: 728px;
+  width: 40%;
 }
 .blood{
-  background: url(../img/blood.png) no-repeat top, url('../img/background.jpg') no-repeat center center /100%;
+  background: url(../img/blood.png) no-repeat top /70%, #14131A url('../img/background.jpg') no-repeat center center /110%;
 }
 /*end img*/
 
@@ -182,6 +189,128 @@ body{
    margin-bottom: 20px; 
 }
 .no-blood{
-  background:  url('../img/background.jpg') no-repeat center center /100%;
+  background:  url('../img/background.jpg') no-repeat center center /100% #14131A;
 }
-
+/*end col-left*/
+.menu-button{
+  display: none;
+}
+.menu-close{
+  display: none;
+}
+@media (max-width: 1100px) {
+  .content {
+    flex-direction: column;
+    margin-bottom: 3%;
+  }
+  .header{
+    margin-bottom: 4%;
+  }
+  .col-right{
+    margin-bottom: 5%; 
+  }
+}
+@media (max-width: 800px) {
+  .blood {
+  background: #14131A;
+}
+.venom {
+  top: 9%;
+}
+}
+@media (max-width: 576px) {
+  .venom{
+    width: 30%;
+  }
+  .nav-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform:translateX(100%);
+    transition: transform 0.7s;
+  }
+  .nav-menu-item{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 0;
+  }
+  .nav-menu-link{
+    color: #14131A;
+  }
+  .menu-close{
+    position: fixed;
+    opacity: 0;
+    right: 25px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transform:translateX(300%);
+    transition: transform 0.6s;
+    transition-delay: 0.6s;
+  }
+  .is-active{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .menu-button-close{
+    width: 24px;
+    height: 24px;
+  }
+  .nav{
+     margin-left: auto;
+  }
+  .menu-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color:#14131A;
+  }
+  .menu-buttom-icon{
+    width: 24px;
+    height: 24px;
+  }
+  .button-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .button-primier{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .film-text{
+    text-align: center;
+  }
+  .poster-wrepper{
+    flex-direction: column;
+  }
+  .poster{
+    margin-right: 0;
+    margin-bottom: 4%;
+    width: 100%;
+    max-width: 350px;
+  }
+  .content .trailer{
+    max-width: 350px;
+    width: 100%;  
+  }
+  .coloum{
+    column-count: 1;
+  }
+}
